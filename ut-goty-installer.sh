@@ -30,6 +30,9 @@ sudo mount "/dev$cd2" "$DOWNLOADS/UT_GOTY_CD2"
 sudo mkdir -p $INSTALL 
 sudo cp -rv $DOWNLOADS/UT_GOTY_CD1/* $INSTALL
 sudo cp -rv $DOWNLOADS/UT_GOTY_CD2/* $INSTALL
+# Move the maps from cd2 to Maps
+sudo mv -v $INSTALL/maps/* $INSTALL/Maps/
+sudo rmdir $INSTALL/maps
 
 # Unmount the ISOs
 sudo umount $DOWNLOADS/UT_GOTY_CD1
